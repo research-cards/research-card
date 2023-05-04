@@ -1,0 +1,40 @@
+{
+  "@context": "https://w3id.org/ro/crate/1.0/context",
+  "@id": "https://example.com/my-research-object",
+  "@type": "Dataset",
+  "name": "My Research Object",
+  "description": "This is a description of my research object.",
+  "license": "https://creativecommons.org/licenses/by/4.0/",
+  "content": [
+    {
+      "@id": "https://example.com/my-data-file",
+      "name": "data.txt",
+      "encodingFormat": "text/plain",
+      "contentUrl": "https://example.com/data.txt"
+    },
+    {
+      "@id": "https://example.com/my-paper",
+      "@type": "ScholarlyArticle",
+      "name": "My Paper",
+      "url": "https://doi.org/10.1234/my-paper",
+      "datePublished": "2022-01-01"
+    },
+    {
+      "@id": "https://example.com/my-preprint",
+      "@type": "ScholarlyArticle",
+      "name": "My Preprint",
+      "url": "https://doi.org/10.5678/my-preprint",
+      "datePublished": "2021-12-01",
+      "isPreprintOf": {
+        "@id": "https://doi.org/10.1234/my-paper"
+      }
+    },
+    {
+      "@id": "https://example.com/my-workflow",
+      "@type": "Workflow",
+      "name": "My Workflow",
+      "url": "https://github.com/my-workflow",
+      "description": "This is a description of my workflow."
+    }
+  ]
+}
